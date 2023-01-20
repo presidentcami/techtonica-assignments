@@ -6,3 +6,7 @@ body {
     color: whitesmoke;
     font-family: 'Raleway', sans-serif;
 }
+
+.description {
+    width: 600px;
+}
