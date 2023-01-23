@@ -11,3 +11,11 @@ function addBorder() {
 }
 
 picBorder.addEventListener('mouseover', addBorder); 
+
+// Attempt to change the color of the text on click for links
+const hyperLinks = document.querySelector('a');
+
+function changeColor() {
+    hyperLinks.style.color = 'white';
+}
+hyperLinks.addEventListener('click', changeColor);
