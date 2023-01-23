@@ -10,4 +10,4 @@ function addBorder() {
     picBorder.style.border = '5px solid red';
 }
 
-picBorder.addEventListener('mouseover', addBorder);
+picBorder.addEventListener('mouseover', addBorder); 
