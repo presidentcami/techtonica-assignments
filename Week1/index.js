@@ -7,10 +7,15 @@ document.querySelector('ul').appendChild(newListItem);
 const picBorder = document.querySelector('img');
 
 function addBorder() {
+    if (!picBorder.style.border) {
     picBorder.style.border = '5px solid red';
+    } else {
+    picBorder.style.border = '';
+    }
+    // console.log(picBorder.style.border);
 }
 
-picBorder.addEventListener('mouseover', addBorder); 
+picBorder.addEventListener('click', addBorder); 
 
 // Attempt to change the color of the text on click for links
 const hyperLinks = document.querySelector('a');
