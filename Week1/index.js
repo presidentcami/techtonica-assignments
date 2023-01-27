@@ -32,34 +32,25 @@ function addBorder() {
 
 picBorder.addEventListener('click', addBorder); 
 
-// Attempt to change the color of the text on click for links
-// const hyperLinks = document.querySelectorAll('.links');
+// make a button
+// accessing the div that the button will be attached to
+let instructionsDiv = document.getElementById("instructions");
+// creating the button
+let button = document.createElement("button")
+// creating text to be displayed on button
+button.innerText = "Excellent Work!"
 
-// function mouseoverLink (textColor) {
-//     textColor = 'white';
-//     hyperLinks.style.color = textColor;
-//     console.log("we changed the color of text")
-// }
+// apply styles the button
+// have to set a class attribute to it then go to styles and make that class
+button.setAttribute("class", "button");
 
-// function linksListener(hyperLink) {
-//     hyperLink.addEventListener('mouseover', mouseoverLink)
-// }
+// add event listener so clicking button takes you to a gif
+button.addEventListener("click", () => {
+    window.open("https://media0.giphy.com/media/Zvt900PrtpL1CC7rml/giphy.gif?cid=ecf05e47ntll4m95y4yhsnm0ptnl66nrvn3899r3bu5c13sv&rid=giphy.gif&ct=g", '_blank');
+})
 
-// hyperLinks.forEach(linksListener)
+// append button to div
+instructionsDiv.appendChild(button)
 
-// change function
-// function changeLinkColor (arrayOfLinks) {
-//     for (let i = 0; i < arrayOfLinks.length; i++) {
-//         arrayOfLinks.addEventListener('click', () => {
-//             arrayOfLinks[i].style.color = 'white';
-//         })
-//     }
-// }
 
-// changeLinkColor(hyperLinks);
 
-// make a for loop to go thru each hyperlink, to each link add event listener
-// hyperLinks.addEventListener('click', function(){
-//     for (let i = 0; i < hyperLinks.length; i++) {
-//         hyperLinks[i].style.color = 'white';
-// });
