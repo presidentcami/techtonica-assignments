@@ -23,6 +23,7 @@ body {
     float: left;
     margin-left: 30px;
 }
-ul, .ingredients {
+
+.ingredients {
 list-style-type: none;
 }
