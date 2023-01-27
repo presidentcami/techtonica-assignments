@@ -44,12 +44,26 @@ body {
     .left, .right {
         width: 50%;
     }
+    body {
+        font-size: 20%;
+    }
 }
 
-@media (min-width: ) {
-    p {
-        font-size: ;
-        line-height: ;
+/* Mobile */
+@media screen and (max-width: 320px) {
+    .description {
+            width: 50%;
+        }
+    
+    img {
+            width: 75%;
+        }
+    
+    .left, .right {
+            width: 50%;
+        }
+    body {
+        font-size: 20%;
     }
 }
 
