@@ -3,4 +3,4 @@
 # Project-generated files
 package-lock.json
 # Locally-generated files
-.DS_Store
+**/.DS_Store
