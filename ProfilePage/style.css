@@ -9,3 +9,7 @@ body {
 h1 {
     font-family: 'Aboreto', cursive;
 }
+
+#me {
+    border-radius: 500px;
+}
