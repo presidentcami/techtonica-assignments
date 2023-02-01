@@ -43,6 +43,13 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    color: whitesmoke;
+    font-family: 'Aboreto', cursive;
+    font-size: 48px;
+    text-align: center;
+}
+
 #me {
     border-radius: 500px;
 }
