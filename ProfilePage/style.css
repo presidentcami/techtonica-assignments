@@ -76,8 +76,13 @@ h3 {
     /* margin-left: 245px; */
 }
 
+p {
+    padding-bottom: 20px;
+}
+
 .socialsIcons {
     width: 50%;
-    margin: 0 auto;
+    margin: auto;
+    padding: 10px;
     text-align: center;
 }
