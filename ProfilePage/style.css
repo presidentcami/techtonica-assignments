@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(white, green) ;
+    background-image: linear-gradient(black, whitesmoke);
     font-family: 'Hind Siliguri', sans-serif;
     font-size: 16px;
     min-height: 100vh;
@@ -16,22 +16,28 @@ body {
     margin: auto;
     list-style: none;
 }
+
 ul {
     background-color: black;
     padding: 5px 0 5px 0;
 }
+
 li {
     padding: 0 10px 0 10px;
     background-color: whitesmoke;
     border-radius: 30px;
 }
-.navigation, li, a {
+
+.navigation,
+li,
+a {
     font-weight: bold;
     display: inline;
     text-decoration: none;
 }
 
 h1 {
+    color: whitesmoke;
     font-family: 'Aboreto', cursive;
     font-size: 72px;
     text-align: center;
@@ -45,10 +51,12 @@ h1 {
     display: flex;
 }
 
-#leftCircle, #me, #rightCircle {
+#leftCircle,
+#me,
+#rightCircle {
     flex: 33.33%;
     padding: 5px;
-} 
+}
 
 .aboutMe {
     text-align: center;
@@ -66,4 +74,9 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     /* margin-left: 245px; */
+}
+
+.socialsIcons {
+    al width: 50%;
+    margin: auto;
 }
