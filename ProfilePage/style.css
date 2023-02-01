@@ -50,3 +50,20 @@ h1 {
     padding: 5px;
 } 
 
+.aboutMe {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+h3 {
+    font-family: 'Aboreto', cursive;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    /* width: 50%; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-left: 245px; */
+}
