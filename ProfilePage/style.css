@@ -122,4 +122,21 @@ p {
     /* Footer height */
 }
 
-/* .form {} */
+.form {
+    text-align: center;
+    margin: auto;
+    border-radius: 50px;
+    background-color: bisque;
+    width: 50%;
+    padding: 25px;
+}
+
+input[type="text"], input[type="number"] {
+    font-family: 'Hind Siliguri',
+        sans-serif;;
+    width: 30%;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid black;
+}
