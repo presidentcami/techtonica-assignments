@@ -14,18 +14,18 @@
 <body>
     <div class="pagecontainer">
         <div class="content-wrap">
-            <div class="navbar">
+            <section class="navbar">
                 <nav class="navigation">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="contact.html">Contact Me</a></li>
                     </ul>
                 </nav>
-            </div>
-            <div>
+            </section>
+            <header>
                 <h2>Get In Touch With Me</h2>
-            </div>
-            <div class="form">
+            </header>
+            <section class="form">
                 <form action="/contact.html" method="post">
                     <label for="firstName">First Name<span aria-label="required">*</span></label><br>
                     <input type="text" name="first" id="firstName" required><br>
@@ -34,12 +34,12 @@
                     <label for="email">Email Address<span aria-label="required">*</span></label><br>
                     <input type="text" name="email" id="email" required><br>
                     <label for="phone">Phone Number</label><br>
-                    <input type="number" name="phone-nubmer" id="phone" min="7"><br>
+                    <input type="text" name="phone-nubmer" id="phone" pattern="[0-9]{7,10}"><br>
                     <label for="address">Your Address</label><br>
                     <textarea name="address" id="address" rows="4" cols="50"></textarea><br>
                     <input type="submit" value="Get in Touch!" id="submit">
                 </form>
-            </div>
+            </section>
             <footer id="footer">
                 <div class="socialsIcons">
                     <a href="https://www.linkedin.com/in/camille-williams-phl/" target="_blank"><img

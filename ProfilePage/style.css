@@ -62,7 +62,7 @@ h2 {
     font-family: 'Aboreto', cursive;
     font-size: 48px;
     text-align: center;
-    margin-top: 50px;
+    margin: 30px;
 }
 
 #me {
@@ -110,7 +110,55 @@ p {
     text-align: center;
 }
 
+.form {
+    text-align: center;
+    margin: auto;
+    border: 2px solid lime;
+    border-radius: 50px;
+    background-color: rgb(255, 248, 220, .5);
+    width: 50%;
+    padding: 25px;
+}
 
+label {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+input[type="text"] {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    width: 30%;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid black;
+}
+
+input[type="text"]:hover {
+    background-color: cornsilk;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    width: 20%;
+    padding: 8px 16px;
+    transition-duration: 0.4s;
+}
+
+input[type="submit"]:hover {
+    background-color: limegreen;
+}
+
+textarea {
+    background-color: rgb(245, 222, 179, .5);
+    border-radius: 10px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+}
 
 #footer {
     /* position: absolute; */
@@ -122,21 +170,3 @@ p {
     /* Footer height */
 }
 
-.form {
-    text-align: center;
-    margin: auto;
-    border-radius: 50px;
-    background-color: bisque;
-    width: 50%;
-    padding: 25px;
-}
-
-input[type="text"], input[type="number"] {
-    font-family: 'Hind Siliguri',
-        sans-serif;;
-    width: 30%;
-    height: 32px;
-    border: none;
-    background-color: transparent;
-    border-bottom: 3px solid black;
-}
