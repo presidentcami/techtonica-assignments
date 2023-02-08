@@ -6,7 +6,18 @@ body {
     font-family: 'Paytone One', sans-serif;
     font-size: 56px;
     text-align: center;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#gameName {
+    background-color: aquamarine;
+    border-radius: 500px;
+    padding: 10px;
+}
+
 section {
     height: 500px;
     background-color: blueviolet;
