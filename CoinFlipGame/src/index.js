@@ -7,3 +7,26 @@ say something like 'correct it's heads' or 'eh, wrong'
  */
 
 const submitButton = document.getElementById('submit');
+const headsSelect = document.getElementById('heads').value;
+const tailsSelect = document.getElementById('tails').value;
+
+// let headTailArray = [headsSelect, tailsSelect];
+console.log(headsSelect)
+console.log(tailsSelect)
+
+
+// console.log(headsOrTails)
+
+// submitButton.addEventListener('click', function(){
+
+//     function retrieveFormValue() {
+//         // let headsOrTails = '';
+//         for (i = 0; i < headTailArray.length; i++) {
+//             if (headTailArray[i].checked) {
+//                 console.log(headTailArray[i].value)
+
+//                 // headsOrTails = headTailArray[i].value;
+//             }
+//         }
+//     }
+// })
