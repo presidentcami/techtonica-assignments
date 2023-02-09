@@ -1,8 +1,5 @@
 /* need an event listener for the submit button 
- on click, flip the coin - so the result section will
-show either true or false. the result should also check
-if the coin flip matched the answer, and the answer will
-say something like 'correct it's heads' or 'eh, wrong'
+ 
 
  */
 
@@ -10,23 +7,41 @@ const submitButton = document.getElementById('submit');
 const headsSelect = document.getElementById('heads').value;
 const tailsSelect = document.getElementById('tails').value;
 
-// let headTailArray = [headsSelect, tailsSelect];
-console.log(headsSelect)
-console.log(tailsSelect)
+let headTailArray = [headsSelect, tailsSelect];
 
+console.log(headTailArray)
 
-// console.log(headsOrTails)
+submitButton.addEventListener('click', function(e){
+    e.preventDefault();
+    /*  on click, flip the coin - so the result section will
+show either heads or tails */
 
-// submitButton.addEventListener('click', function(){
+    let result;
+    let heads = 0;
+    let tails = 0;
+    x = (Math.floor(Math.random() * 2) == 0);
+    if (x) {
+       result = "You  got heads!";
+       heads ++;
+    } else {
+        result = "You got tails!";
+        tails ++;
+    }
 
-//     function retrieveFormValue() {
-//         // let headsOrTails = '';
-//         for (i = 0; i < headTailArray.length; i++) {
-//             if (headTailArray[i].checked) {
-//                 console.log(headTailArray[i].value)
+    document.getElementById("result").innerHTML = result;
 
-//                 // headsOrTails = headTailArray[i].value;
-//             }
-//         }
-//     }
-// })
+    // function retrieveFormValue() {
+    //     // let headsOrTails = '';
+    //     for (i = 0; i < headTailArray.length; i++) {
+    //         if (headTailArray[i].checked) {
+    //             console.log(headTailArray[i].value)
+
+    //             // headsOrTails = headTailArray[i].value;
+    //         }
+    //     }
+    // }
+
+    /* the result should also check
+        if the coin flip matched the answer, and the answer will
+    say something like 'correct it's heads' or 'eh, wrong' */
+})
