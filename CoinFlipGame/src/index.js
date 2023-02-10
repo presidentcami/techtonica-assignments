@@ -3,33 +3,38 @@
 
  */
 
-const submitButton = document.getElementById('submit');
 const headsSelect = document.getElementById('heads').value;
 const tailsSelect = document.getElementById('tails').value;
 
-let headTailArray = [headsSelect, tailsSelect];
+// let headTailArray = [headsSelect, tailsSelect];
 
-console.log(headTailArray)
+// console.log(headTailArray)
 
-submitButton.addEventListener('click', function(e){
+let game = document.forms[0];
+
+game.addEventListener('submit', function(e){
     e.preventDefault();
     /*  on click, flip the coin - so the result section will
 show either heads or tails */
-
     let result;
     let heads = 0;
     let tails = 0;
     x = (Math.floor(Math.random() * 2) == 0);
     if (x) {
-       result = "You  got heads!";
+        result = headsSelect;
+    //    result = "You  got heads!";
        heads ++;
     } else {
-        result = "You got tails!";
+        result = tailsSelect;
+        // result = "You got tails!";
         tails ++;
     }
 
-    document.getElementById("result").innerHTML = result;
+    let resultSection = document.getElementsByClassName('result')[0];
+    resultSection.innerHTML = `Heads: ${heads} Tails: ${tails}`
 
+    // document.getElementById("result").innerHTML = result;
+    // console.log(heads, tails)
     // function retrieveFormValue() {
     //     // let headsOrTails = '';
     //     for (i = 0; i < headTailArray.length; i++) {
