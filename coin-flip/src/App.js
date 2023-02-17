@@ -12,7 +12,11 @@ function App() {
   return (
     <div className="App">
       <Score computerScore={computerScore} playerScore={playerScore} />
-      <PlayRound />
+      <PlayRound 
+        computerScore={computerScore}
+        playerScore={playerScore}
+        setComputerScore={setComputerScore}
+        setPlayerScore={setPlayerScore} />
     </div>
   );
 }
