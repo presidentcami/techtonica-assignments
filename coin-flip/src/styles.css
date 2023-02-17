@@ -23,3 +23,11 @@
     margin: 20px;
     padding: 10px;
 }
+
+.tails-box {
+    background-color: yellow;
+    border: 1px black solid;
+    width: 50px;
+    margin: 20px;
+    padding: 10px;
+}
