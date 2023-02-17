@@ -1,6 +1,7 @@
 import React from 'react';
 import "./styles.css"
 import Score from './components/Score'
+import { useState } from 'react';
 
 function App() {
   
