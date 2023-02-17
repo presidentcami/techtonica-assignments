@@ -1,6 +1,7 @@
 import React from 'react';
 import "./styles.css"
 import Score from './components/Score'
+import PlayRound from './components/PlayRound';
 import { useState } from 'react';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Score computerScore={computerScore} playerScore={playerScore} />
+      <PlayRound />
     </div>
   );
 }
