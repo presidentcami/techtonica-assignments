@@ -2,3 +2,8 @@
     font-family: sans-serif;
     text-align: center;
 }
+
+.choose-coin-section {
+    display: flex;
+    justify-content: center;
+}
