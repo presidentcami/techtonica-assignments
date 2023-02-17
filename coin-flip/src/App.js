@@ -11,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Flip That Coin!</h1>
       <Score computerScore={computerScore} playerScore={playerScore} />
       <PlayRound 
         computerScore={computerScore}
