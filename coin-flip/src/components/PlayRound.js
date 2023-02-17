@@ -67,6 +67,11 @@ function PlayRound(props) {
                     flip coin
                 </button>
             </div>
+
+            <div>
+                <p>You guessed: {playerGuess}</p>
+                <p>Coin flip result: {flipResult}</p>
+            </div>
         </div>
     )
 }
