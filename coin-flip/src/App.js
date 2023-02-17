@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Score />
+      <Score computerScore={computerScore} playerScore={playerScore} />
     </div>
   );
 }
