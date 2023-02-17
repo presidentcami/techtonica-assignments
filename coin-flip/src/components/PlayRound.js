@@ -72,6 +72,21 @@ function PlayRound(props) {
                 <p>You guessed: {playerGuess}</p>
                 <p>Coin flip result: {flipResult}</p>
             </div>
+
+            <div id="reset">
+                <button
+                    onClick={() => {
+                        props.setPlayerScore(0);
+                        props.setComputerScore(0);
+                        setHeadsStyle("box");
+                        setTailsStyle("box");
+                        setPlayerGuess();
+                        setFlipResult();
+                    }}
+                >
+                    reset
+                </button>
+            </div>
         </div>
     )
 }
