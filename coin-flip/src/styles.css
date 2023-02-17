@@ -15,3 +15,11 @@
     margin: 20px;
     padding: 10px;
 }
+
+.heads-box {
+    background-color: blue;
+    border: 1px black solid;
+    width: 50px;
+    margin: 20px;
+    padding: 10px;
+}
