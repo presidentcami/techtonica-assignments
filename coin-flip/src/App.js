@@ -17,6 +17,7 @@ function App() {
         playerScore={playerScore}
         setComputerScore={setComputerScore}
         setPlayerScore={setPlayerScore} />
+      
     </div>
   );
 }

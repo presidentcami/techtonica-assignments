@@ -6,6 +6,7 @@ function PlayRound(props) {
     const [flipResult, setFlipResult] = useState();
     const [headsStyle, setHeadsStyle] = useState("box");
     const [tailsStyle, setTailsStyle] = useState("box");
+    const [message, setMessage] = useState("")
 
     const changeHeadsColor = () => {
         setHeadsStyle("heads-box");
@@ -59,8 +60,10 @@ function PlayRound(props) {
 
                         if (result === playerGuess) {
                             props.setPlayerScore(props.playerScore + 1);
+                            setMessage("✧ Player success! ✧")
                         } else {
                             props.setComputerScore(props.computerScore + 1);
+                            setMessage("Player failure :(")
                         }
                     }}
                 >
@@ -71,6 +74,7 @@ function PlayRound(props) {
             <div>
                 <p>You guessed: {playerGuess}</p>
                 <p>Coin flip result: {flipResult}</p>
+                <p>{message}</p>
             </div>
 
             <div id="reset">
