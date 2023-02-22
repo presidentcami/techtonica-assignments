@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(yellow, orange);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* #pagecontainer {} */
+
+/* #content-wrap {
+    padding-bottom: 2.5rem;
+
+} */
+
+.navbar {
+    text-align: center;
+    margin: auto;
+    list-style: none;
+}
+
+ul {
+    /* background-color: black; */
+    padding: 5px 0 5px 0;
+    margin: 20px auto;
+}
+
+li {
+    padding: 0 10px 0 10px;
+    background-color: whitesmoke;
+    border: solid 1px black;
+    border-radius: 30px;
+}
+
+.navigation,
+li,
+a {
+    font-weight: bold;
+    display: inline;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    /* color: whitesmoke; */
+    font-family: 'Aboreto', cursive;
+    font-size: 72px;
+    text-align: center;
+}
+
+h2 {
+    /* color: whitesmoke; */
+    font-family: 'Aboreto', cursive;
+    font-size: 48px;
+    text-align: center;
+    margin: 30px;
+}
+
+#me {
+    border-radius: 500px;
+}
+
+.row {
+    display: flex;
+}
+
+#leftCircle,
+#me,
+#rightCircle {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+.aboutMe {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+h3 {
+    font-family: 'Aboreto', cursive;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 30px;
+    /* width: 50%; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-left: 245px; */
+}
+
+p {
+    padding-bottom: 20px;
+}
+
+.socialsIcons {
+    width: 50%;
+    margin: 5% auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+    margin: auto;
+    border: 2px solid lime;
+    border-radius: 50px;
+    background-color: rgb(255, 248, 220, .5);
+    width: 50%;
+    padding: 25px;
+}
+
+label {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+input[type="text"] {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    width: 30%;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid black;
+}
+
+input[type="text"]:hover {
+    background-color: cornsilk;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    width: 20%;
+    padding: 8px 16px;
+    transition-duration: 0.4s;
+}
+
+input[type="submit"]:hover {
+    background-color: limegreen;
+}
+
+textarea {
+    background-color: rgb(245, 222, 179, .5);
+    border-radius: 10px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+}
+
+#footer {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    /* Footer height */
+}
+
