@@ -86,6 +86,7 @@ function PlayRound(props) {
                         setTailsStyle("box");
                         setPlayerGuess();
                         setFlipResult();
+                        setMessage("")
                     }}
                 >
                     reset
