@@ -5,7 +5,7 @@ import PlayRound from './components/PlayRound';
 import { useState } from 'react';
 
 function App() {
-  
+
   const [computerScore, setComputerScore] = useState(0);
   const [playerScore, setPlayerScore] = useState(0);
 
