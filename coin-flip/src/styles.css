@@ -1,0 +1,37 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.choose-coin-section {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    background-color: white;
+    border: 1px black solid;
+    width: 50px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.heads-box {
+    background-color: blue;
+    border: 1px black solid;
+    width: 50px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.tails-box {
+    background-color: yellow;
+    border: 1px black solid;
+    width: 50px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.flip-coin-section {
+    margin: 10px;
+}
