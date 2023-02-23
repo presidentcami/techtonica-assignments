@@ -21,7 +21,6 @@ const books = [
             "author": "N.K. Jemisin",
             "format": "Hardcover"
         }
-
 ]
 
 //all routes in here are starting with /books
@@ -29,5 +28,14 @@ router.get('/', (req, res) => {
     console.log(books)
     res.send(books)
 })
+
+router.post('/', (req, res) => {
+    console.log(req);
+    const book = req.body;
+
+    books.push(book);
+    
+    res.send(`The book ${book.title} was added to the database!`);
+});
 
 export default router;
