@@ -1,4 +1,4 @@
-const books = [{
+[{
     "isbn": "12345",
     "title": "Who Fears Death",
     "author": "Nnedi Okorafor",
@@ -17,3 +17,5 @@ const books = [{
     "format": "Hardcover"
 }
 ]
+
+module.default = books;

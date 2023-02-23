@@ -1,5 +1,6 @@
 import express from 'express';
 
+
 const router = express.Router();
 
 const books = [ 
@@ -30,12 +31,19 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    console.log(req);
+    // console.log(req);
     const book = req.body;
 
     books.push(book);
     
     res.send(`The book ${book.title} was added to the database!`);
+});
+
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    const foundBook = books.find((book) => book.isbn == id);
+
+    res.send(foundBook);
 });
 
 export default router;
