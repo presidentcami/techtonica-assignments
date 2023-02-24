@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     const { id } = req.params;
-    const foundBook = books.find((book) => book.isbn == id);
+    const foundBook = books.find((book) => book.isbn === id);
 
     res.send(foundBook);
 });
