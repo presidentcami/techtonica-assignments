@@ -1,41 +1,51 @@
-const coord = {
-    lon: -122.3321,
-    lat: 47.6062,
-    weather: [{
-        id: 803,
-        main: "Clouds",
-        description: "broken clouds",
-        icon: "04d",
-        base: "stations",
-        main: {
-            temp: 79.38,
-            feels_like: 75.74,
-            temp_min: 77.4,
-            pressure: 1000,
-            humidity: 78
-            },
-        visibility: 10000,
-        wind: {
-                speed: 5.66,
-                deg: 200
-            },
-        clouds: {
-            all: 75
+const weather = {
+    "coord": {
+        "lon": -75.1638,
+        "lat": 39.9523
+    },
+    "weather": [
+        {
+            "id": 701,
+            "main": "Mist",
+            "description": "mist",
+            "icon": "50d"
         },
-        dt: 1677006621,
-        sys: {
-            type: 2,
-            id: 2041694,
-            country: "US",
-            sunrise: 1676991905,
-            sunset: 1677030070
-            },
-        timezone: -28800,
-        id: 5809844,
-        name: "Seattle",
-        cod: 200
+        {
+            "id": 300,
+            "main": "Drizzle",
+            "description": "light intensity drizzle",
+            "icon": "09d"
         }
-    ]
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 277.04,
+        "feels_like": 273.57,
+        "temp_min": 274.55,
+        "temp_max": 279.26,
+        "pressure": 1006,
+        "humidity": 92
+    },
+    "visibility": 4828,
+    "wind": {
+        "speed": 4.12,
+        "deg": 360
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1677604930,
+    "sys": {
+        "type": 2,
+        "id": 2037403,
+        "country": "US",
+        "sunrise": 1677584163,
+        "sunset": 1677624646
+    },
+    "timezone": -18000,
+    "id": 4560349,
+    "name": "Philadelphia",
+    "cod": 200
 }
 
-module.exports = coord;
+module.exports = weather;
