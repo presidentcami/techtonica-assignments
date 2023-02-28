@@ -11,7 +11,8 @@ const WeatherForm = (props) =>{
   //hint = Make the submit an function in the parent and control the info in the parent
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(city);
+    props.handleSubmit(city);
+    // console.log('in weather form on submit');
   };
 
 
