@@ -1,8 +1,6 @@
 const weather = {
-    "coord": {
-        "lon": -75.1638,
-        "lat": 39.9523
-    },
+    "lon": -75.1638,
+    "lat": 39.9523,
     "weather": [
         {
             "id": 701,
