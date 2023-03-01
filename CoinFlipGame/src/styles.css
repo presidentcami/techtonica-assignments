@@ -1,0 +1,25 @@
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+.header {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 56px;
+    text-align: center;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameName {
+    background-color: aquamarine;
+    border-radius: 500px;
+    padding: 10px;
+}
+
+section {
+    height: 50px;
+    background-color: blueviolet;
+    border: solid black 1px;
+}
