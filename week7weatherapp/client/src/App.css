@@ -10,7 +10,7 @@ body {
 }
 
 form {
-margin-left: 150px;
+margin-left: 30%;
 }
 
 
@@ -24,4 +24,8 @@ margin-left: 150px;
  }
 .data{
   color: purple
+}
+
+.weather-card {
+  text-align: center;
 }

@@ -32,7 +32,7 @@ console.log(props.data)
           </p>
           <p>
             Wind Speed: <span className="data">
-              {props.data.wind.speed} <sup>mph</sup>
+              {props.data.wind.speed} mph
             </span>
           </p>
             </div>
