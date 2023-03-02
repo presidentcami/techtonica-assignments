@@ -24,6 +24,11 @@ console.log(props.data)
                 {props.data.main.feels_like} <sup>o</sup>F
               </span>
             </p>
+          <p>
+            Humidity: <span className="data">
+              {props.data.main.humidity}%
+            </span>
+          </p>
             </div>
 
         </div>
