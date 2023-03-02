@@ -16,7 +16,6 @@ function App() {
       .then((response) => response.json())
       .then((result) => {
         console.log(result)
-        // setCity(result.weather[0].name);
         setResult(result);
       });
   }
