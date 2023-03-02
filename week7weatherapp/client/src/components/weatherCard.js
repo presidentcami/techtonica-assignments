@@ -2,6 +2,7 @@ const WeatherCard = (props) => {
 console.log(props.data)
 // add data from API
 
+// had to update props to get data from the live API, not my hardcode
     return (
         <div className="weather-card">
             <div className="result">

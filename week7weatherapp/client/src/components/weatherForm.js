@@ -1,10 +1,12 @@
 
 const WeatherForm = (props) =>{
 
+  // onChange, we setCity in App.js by using props to update the city with w/e the user types in
 const onChange = (ev) => {
   props.updateCity(ev.target.value);
  }
 
+ // this function is ensuring that the loadCity function from the handleSubmit in the parent happens when we submit in the child
  const handleSubmit = (event) => {
   event.preventDefault()
   props.onSubmit()
