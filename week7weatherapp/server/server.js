@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+// console.log(process.env.API_KEY)
 const dataWeather = require("./data")
 
 const app = express();
@@ -17,11 +18,13 @@ app.get('/', (req, res) => {
 // creates an endpoint for the route /api/weather
 app.get('/weather', (req, res) => {
   const city = req.query.cityName;
+  console.log(req.query);
   const apiKey = process.env.API_KEY;
-  console.log("city", city, "apiKey", apiKey)
+  console.log(apiKey)
+  // console.log("city", req.query.cityName, "apiKey", apiKey)
   const params = new URLSearchParams ({
     q: req.query.cityName,
-    appid: process.env.API_KEY,
+    appid: apiKey,
     units: "imperial"
   });
   const url = `https://api.openweathermap.org/data/2.5/weather?${params}`;
@@ -30,7 +33,7 @@ app.get('/weather', (req, res) => {
   fetch(url)
   .then((res) => res.json())
   .then((data) => {
-    res.send({ data });
+    res.send(data);
   })
   .catch((err) => {
     console.log(err);

@@ -1,17 +1,18 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const WeatherForm = (props) =>{
 
-  const [city, setCity] = useState('');
+  // const [city, setCity] = useState('');
 
   const onChange = (ev) => {
-  setCity(ev.target.value);
+  props.updateCity(ev.target.value);
  }
 
  const handleSubmit = (event) => {
   event.preventDefault()
-  props.onSubmit(city)
+  props.onSubmit()
  }
+
  
     return (
         <div className="weather">
@@ -22,7 +23,7 @@ const WeatherForm = (props) =>{
             type="text"
             placeholder="Please enter the city name"
             name="city"
-            value={city}
+            // value=""
             onChange={onChange}
           />
           <input type="submit" value="Submit" />
