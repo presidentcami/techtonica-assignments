@@ -29,6 +29,11 @@ console.log(props.data)
               {props.data.main.humidity}%
             </span>
           </p>
+          <p>
+            Wind Speed: <span className="data">
+              {props.data.wind.speed} <sup>mph</sup>
+            </span>
+          </p>
             </div>
 
         </div>
