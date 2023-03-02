@@ -22,16 +22,8 @@ function App() {
   }
 
   const handleSubmit = () => {
-    // setCity(city)
-    // console.log(city)
     loadCity();
   }
-
-//  const handleSubmit = (city) =>{
-//   // e.preventDefault();
-//   setCity(city);
-//   loadCity();
-//  }
 
 
   return (
