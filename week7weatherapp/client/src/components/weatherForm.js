@@ -1,10 +1,7 @@
-// import { useState } from 'react';
 
 const WeatherForm = (props) =>{
 
-  // const [city, setCity] = useState('');
-
-  const onChange = (ev) => {
+const onChange = (ev) => {
   props.updateCity(ev.target.value);
  }
 
@@ -13,7 +10,6 @@ const WeatherForm = (props) =>{
   props.onSubmit()
  }
 
- 
     return (
         <div className="weather">
         <h1 className="App-header">Techtonica Weather Forecast App</h1>
