@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       {/* send updateCity as props back to child, so we can use the 'setCity' function */}
       <WeatherForm city={city} updateCity={setCity} onSubmit={handleSubmit}/>
-      {!result ? <p>Please click the button to see Data</p> : <WeatherCard data={result} /> }
+      {!result ? <p>Enter a city to see today's weather!</p> : <WeatherCard data={result} /> }
       {/* {!city ? <p>Please click the button to see Data</p> : <p>{city}</p>} */}
     </div>
   );

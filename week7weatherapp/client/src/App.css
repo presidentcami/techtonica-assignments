@@ -18,13 +18,20 @@ input {
   border-radius: 10px;
 }
 
-#city_name {
+input[type="text"] {
     width: 200px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px whitesmoke inset !important;
 }
 
 .App {
   text-align: center;
   margin: auto;
+  font-size: 24px;
   /* padding-left: 20px; */
  }
  .App-header{
