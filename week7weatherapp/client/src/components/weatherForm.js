@@ -14,7 +14,7 @@ const onChange = (ev) => {
 
     return (
         <div className="weather">
-        <h1 className="App-header">Techtonica Weather Forecast App</h1>
+        <h1 className="App-header">Camille's Weather Forecast App</h1>
         <form onSubmit={handleSubmit}>
           <input
             id="city-name"
