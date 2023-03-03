@@ -1,6 +1,17 @@
+
 const WeatherCard = (props) => {
 console.log(props.data)
 // add data from API
+
+  let sunrise = props.data.sys.sunrise;
+  let sunset = props.data.sys.sunset;
+
+  let rise = new Date(sunrise * 1000);
+  let sunrise1 = rise.toLocaleTimeString();
+
+  let set = new Date(sunset * 1000)
+  let sunrise2 = set.toLocaleTimeString();
+
 
 // had to update props to get data from the live API, not my hardcode
     return (
@@ -33,6 +44,13 @@ console.log(props.data)
           <p>
             Wind Speed: <span className="data">
               {props.data.wind.speed} mph
+            </span>
+          </p>
+          <p>
+            Sunrise: <span className="data">
+              {sunrise1}
+            </span> Sunset <span className="data">
+              {sunrise2}
             </span>
           </p>
             </div>
