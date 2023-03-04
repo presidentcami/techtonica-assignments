@@ -48,10 +48,11 @@ console.log(props.data)
           </p>
           <p>
             Sunrise: <span className="data">
-              {sunrise1}
-            </span> Sunset <span className="data">
-              {sunrise2}
-            </span>
+              {sunrise1}</span> 
+          </p>
+          <p>
+            Sunset <span className="data">
+              {sunrise2} </span>
           </p>
             </div>
 

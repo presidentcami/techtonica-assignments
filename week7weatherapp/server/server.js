@@ -23,7 +23,7 @@ app.get('/weather', (req, res) => {
   // console.log(apiKey) 
   // console.log("city", req.query.cityName, "apiKey", apiKey)
   const params = new URLSearchParams ({
-    q: req.query.cityName,
+    q: city,
     appid: apiKey,
     units: "imperial"
   });
