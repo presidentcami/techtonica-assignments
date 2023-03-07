@@ -3,15 +3,19 @@ import Choices from "./choices";
 
 const QuestionCard = (props) => {
   
-let answers = [props.question.incorrect_answers, props.question.correct_answer].flat(1)
-  // let incorrectAnswers = [props.question.incorrect_answers, props.question.correct_answer].flat(1);
+  let answers = [
+    [{ incorrect: props.question.incorrect_answers[0] }], 
+    [{ incorrect: props.question.incorrect_answers[1] }], 
+    [{ incorrect: props.question.incorrect_answers[2] }], 
+    [{ correct: props.question.correct_answer }]];
   console.log("Answers array", answers)
 
     return (
       <div className={"question-section"}>
         <div className='question-text'>{props.question.question}</div>
         <div className='answer-section'>
-        {answers.map((answer) => {
+        {answers.map((answer, index) => {
+          answer = Object.values(answer[0]).toString()
           return <Choices answer={answer} />
         })}
         </div>
