@@ -6,6 +6,7 @@ const Game = (props) => {
     const [questions, setQuestions] = useState([]);
 
     const loadData = () => {
+        // remember that this link needs to match the port number and path on backend
         fetch('http://localhost:8000/api/game')
             .then((response) => response.json())
             .then(data => {
