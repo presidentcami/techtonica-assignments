@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { decode } from 'html-entities';
 
 const Choices = (props) => {
     const [value, setValue] = useState('');
@@ -7,7 +8,7 @@ const Choices = (props) => {
         <div className={"answers-section"}>
             {/* <div className='question-text'>{props.question.question}</div> */}
             <div className='answer-section'>
-            <button onClick={() => setValue(props.answer)} value={value}>{props.answer}</button>
+            <button onClick={() => setValue(decode(props.answer))} value={value}>{decode(props.answer)}</button>
             </div>
         </div>
     );
