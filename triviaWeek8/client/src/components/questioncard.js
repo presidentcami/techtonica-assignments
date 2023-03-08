@@ -1,5 +1,5 @@
 // import { useState } from 'react'; 
-import Choices from "./choices";
+// import Choices from "./choices";
 import { decode } from 'html-entities';
 
 const QuestionCard = (props) => {
@@ -23,14 +23,22 @@ const QuestionCard = (props) => {
   // didn't work to put this inside of map, so put it outside and it worked!
   shuffleArray(answers)
 
+
     return (
       <div className={"question-section"}>
         <div className='question-text'>{decode(props.question.question)}</div>
         <div className='answer-section'>
         {answers.map((answer, index) => {
-          return <button key={index}>{answer.optionText}</button>
-
-          // setScore={props.setScore}
+          return <button key={index}
+            onClick={() => {
+              if (answer.isCorrect) {
+                props.setCorrectScore((previousScore) => previousScore + 1)
+              } else {
+                props.setIncorrectScore((previousScore) => previousScore + 1)
+              }
+            }}
+          >{answer.optionText}</button>
+         
         })}
         </div>
       </div>
