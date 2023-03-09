@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import QuestionCard from "./questioncard";
-// import { decode } from 'html-entities';
+import { decode } from 'html-entities';
 
 
 const Game = (props) => {
@@ -17,25 +17,40 @@ const Game = (props) => {
             .then(data => {
                 console.log("This is line 11", data.results);
                 setQuestions(data.results);
+
+                // final result of map will be an array of arrays, each array holds inner arrays with answers, and false two keyvalue pairs, answer 
+                // take index and data.results
+                // could shuffle in map
+                let arrOfAnswers = data.results.map((obj) => {
+                    let arrOfAnswers = [[obj.incorrect_answers[0], false], 
+                    [obj.incorrect_answers[1], false], 
+                    [obj.incorrect_answers[2], false], 
+                    [obj.correct_answer, true]];
+
+                    shuffleArray(arrOfAnswers);
+                    return arrOfAnswers;
+                    // console.log(arrOfAnswers)
+                })
+                setAnswers(arrOfAnswers);
             })
     }
-
+console.log(answers)
     useEffect(() => {
         loadData();
         // eslint-disable-next-line
     }, [])
 
-    // const shuffleArray = array => {
-    //     for (let i = array.length - 1; i > 0; i--) {
-    //         const j = Math.floor(Math.random() * (i + 1));
-    //         const temp = array[i];
-    //             array[i] = array[j];
-    //             array[j] = temp;
-    //         }
-    //     }
+    const shuffleArray = array => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
 
     // setAnswers(shuffleArray(answers))
-    console.log("answers", answers)
+    // console.log("answers", answers)
 // console.log("questions", questions)
     return (
         <div className="Container">
