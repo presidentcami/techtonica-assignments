@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import QuestionCard from "./questioncard";
 import Question from "./question"
 import { decode } from 'html-entities';
 
@@ -10,7 +9,6 @@ const Game = (props) => {
     const [questionsAndAnswers, setQuestionsAndAnswers] = useState(null)
     const [currentQ, setCurrentQ] = useState(0);
     const [correctScore, setCorrectScore] = useState(0);
-    // const [incorrectScore, setIncorrectScore] = useState(0);
 
     const loadData = () => {
         // remember that this link needs to match the port number and path on backend
@@ -34,7 +32,6 @@ const Game = (props) => {
                    
                     shuffleArray(tempArr) 
                     tempArr.push(decode(arr.question))
-                    // tempArr.questionText = ();
                     return tempArr;
                 })
                 // console.log(arrOfAnswers)
@@ -61,13 +58,6 @@ const Game = (props) => {
             }
         }
 
-    // const handleButtonClick = () => {
-    //     const nextQuestion = currentQ + 1;
-    //     setCurrentQ(nextQuestion);
-    // }
-    // setAnswers(shuffleArray(answers))
-    // console.log("answers", answers)
-// console.log("questions", questions)
     return (
         <div className="Container">
             <div className='question-count'>
@@ -87,23 +77,7 @@ const Game = (props) => {
                 correctScore={correctScore}
                 setCorrectScore={setCorrectScore} 
                 />}
-                {/* {questionsAndAnswers && questionsAndAnswers[0][4]} */}
-                
-                
-                {/* questionsAndAnswers[0].map((answers, index) => {
-                    <button key={index}>{answers.answerText}</button>
-                })}   */}
-   
-            
-              
-       
             </div>
-          
-            {/* {questions.map((question, index) => {
-                return <QuestionCard key={index} question={question} answers={questionsAndAnswers} setCorrectScore={setCorrectScore} setIncorrectScore={setIncorrectScore} />
-            })   
-            } */}
-
         </div>
     )
 
