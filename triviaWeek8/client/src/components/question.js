@@ -1,21 +1,25 @@
+import { useState } from 'react';
+
 const Question = (props) => {
-    //handle incre
+    const [disableQAndA, setDisableQAndA] = useState(false)
     console.log(props.qAndA, "inside question.js")
     
     const handleAnswerClick = (e) => {
         
-        const nextQuestion = props.currentQ + 1;
-        if (nextQuestion < props.questions.length) {
+    const nextQuestion = props.currentQ + 1;
+    if (nextQuestion < props.questions.length) {
                 props.setCurrentQ(nextQuestion);
             } else {
-                alert('This is the end of the quiz!');
+                setDisableQAndA(true);
+                // alert('This is the end of the quiz!');
             }   
-     if (props.qAndA[e.target.value].isCorrect === true) {
+    if (props.qAndA[e.target.value].isCorrect === true) {
             props.setCorrectScore((previousScore) => previousScore + 1)
       }
 }
     
     return (
+    <div>{disableQAndA ? (null) :
         <div className="question-section">
             <div className="question-text">
                 <h1>{props.qAndA[4]}</h1>
@@ -31,7 +35,8 @@ const Question = (props) => {
             </button>
         }
     })}</div> 
-    </div>
+    </div>}
+</div>
     )
 }
 
