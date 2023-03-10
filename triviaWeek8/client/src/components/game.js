@@ -15,26 +15,31 @@ const Game = (props) => {
         fetch('http://localhost:8000/api/game')
             .then((response) => response.json())
             .then(data => {
-                console.log("This is line 11", data.results);
+                // console.log("This is line 11", data.results);
                 setQuestions(data.results);
 
-                // final result of map will be an array of arrays, each array holds inner arrays with answers, and false two keyvalue pairs, answer 
+                // final result of map will be an array of arrays, each array holds inner arrays with answers, and false ,two keyvalue pairs, answer 
                 // take index and data.results
                 // could shuffle in map
-                let arrOfAnswers = data.results.map((obj) => {
-                    let arrOfAnswers = [[obj.incorrect_answers[0], false], 
-                    [obj.incorrect_answers[1], false], 
-                    [obj.incorrect_answers[2], false], 
-                    [obj.correct_answer, true]];
-
-                    shuffleArray(arrOfAnswers);
-                    return arrOfAnswers;
+                let arrOfAnswers = data.results.map((arr) => {
+                    
+                    let tempArr = [
+                    {answerText: decode(arr.incorrect_answers[0]), isCorrect: false}, 
+                    {answerText: decode(arr.incorrect_answers[1]), isCorrect: false}, 
+                    {answerText: decode(arr.incorrect_answers[2]), isCorrect: false},
+                    {answerText: decode(arr.correct_answer), isCorrect: true}
+                ]
                     // console.log(arrOfAnswers)
+                    shuffleArray(tempArr)
+                    return tempArr;
                 })
+                
                 setAnswers(arrOfAnswers);
             })
     }
-console.log(answers)
+
+    // console.log("questions", questions,"game.js answers", answers)
+    
     useEffect(() => {
         loadData();
         // eslint-disable-next-line
@@ -62,8 +67,10 @@ console.log(answers)
                 <span>Question 1</span>/{questions.length}
             </div>
             {questions.map((question, index) => {
-                return <QuestionCard key={index} question={question} setCorrectScore={setCorrectScore} setIncorrectScore={setIncorrectScore} />
-            })}
+                console.log("inside questions.map, questions and answers", questions, answers)
+                return <QuestionCard key={index} question={question} answers={answers} setCorrectScore={setCorrectScore} setIncorrectScore={setIncorrectScore} />
+            })   
+            }
 
         </div>
     )
