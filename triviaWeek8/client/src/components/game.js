@@ -9,7 +9,7 @@ const Game = (props) => {
     const [questions, setQuestions] = useState([]);
     const [questionsAndAnswers, setQuestionsAndAnswers] = useState(null)
     const [currentQ, setCurrentQ] = useState(0);
-    // const [correctScore, setCorrectScore] = useState(0);
+    const [correctScore, setCorrectScore] = useState(0);
     // const [incorrectScore, setIncorrectScore] = useState(0);
 
     const loadData = () => {
@@ -72,14 +72,21 @@ const Game = (props) => {
         <div className="Container">
             <div className='question-count'>
                 <div>
-                    {/* <h4>Score: {correctScore}/10</h4>
-                    <h4>Missed: {incorrectScore}/10</h4> */}
+                    <h4>Score: {correctScore}/10</h4>
+                    {/* <h4>Missed: {incorrectScore}/10</h4> */}
                 </div>
                 <span>Question {currentQ + 1}</span>/{questions.length}
             </div>
             <div>
                 {questionsAndAnswers && 
-                <Question qAndA={questionsAndAnswers[currentQ]} currentQ={currentQ} setCurrentQ={setCurrentQ} />}
+                <Question 
+                questions={questions}
+                qAndA={questionsAndAnswers[currentQ]} 
+                currentQ={currentQ} 
+                setCurrentQ={setCurrentQ} 
+                correctScore={correctScore}
+                setCorrectScore={setCorrectScore} 
+                />}
                 {/* {questionsAndAnswers && questionsAndAnswers[0][4]} */}
                 
                 
