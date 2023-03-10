@@ -4,8 +4,8 @@ import { decode } from 'html-entities';
 
 const QuestionCard = (props) => {
   // responses
-  let answers = [props.answers];
-  console.log("answers", answers)
+  let answers = props.answers;
+  console.log("answers as props in questioncard", answers)
   // let answers = [
   //   { optionText: decode(props.question.incorrect_answers[0]), isCorrect: false }, 
   //   { optionText: decode(props.question.incorrect_answers[1]), isCorrect: false }, 
@@ -31,6 +31,7 @@ const QuestionCard = (props) => {
         <div className='question-text'>{decode(props.question.question)}</div>
         <div className='answer-section'>
         {answers.map((answer, index) => {
+          console.log(Object.values(answer[0]))
           return <button key={index}
             onClick={() => {
               if (answer.isCorrect) {

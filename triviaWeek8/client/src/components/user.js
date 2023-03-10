@@ -2,9 +2,11 @@ import { useState } from "react";
 
 const UserForm = (props) => {
   const [value, setValue] = useState("");
+  const [disableForm, setDisableForm] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDisableForm(true)
     if (!value) return;
     props.grabUser(value);
     console.log(value);
@@ -12,6 +14,8 @@ const UserForm = (props) => {
   };
 
   return (
+    <div>
+    {disableForm ? (null) : (
     <div className="ListMain">
       <div className="header">
         <form onSubmit={handleSubmit}>
@@ -25,6 +29,8 @@ const UserForm = (props) => {
           <button type="submit">Send</button>
         </form>
       </div>
+    </div>)
+    }
     </div>
   );
 };

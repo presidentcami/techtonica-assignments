@@ -1,21 +1,23 @@
 import { useState, useEffect } from "react";
-import QuestionCard from "./questioncard";
+// import QuestionCard from "./questioncard";
+import Question from "./question"
 import { decode } from 'html-entities';
 
 
 const Game = (props) => {
 
     const [questions, setQuestions] = useState([]);
-    const [answers, setAnswers] = useState([])
-    const [correctScore, setCorrectScore] = useState(0);
-    const [incorrectScore, setIncorrectScore] = useState(0);
+    const [questionsAndAnswers, setQuestionsAndAnswers] = useState(null)
+    const [currentQ, setCurrentQ] = useState(0);
+    // const [correctScore, setCorrectScore] = useState(0);
+    // const [incorrectScore, setIncorrectScore] = useState(0);
 
     const loadData = () => {
         // remember that this link needs to match the port number and path on backend
         fetch('http://localhost:8000/api/game')
             .then((response) => response.json())
             .then(data => {
-                // console.log("This is line 11", data.results);
+                console.log("This is line 11", data.results);
                 setQuestions(data.results);
 
                 // final result of map will be an array of arrays, each array holds inner arrays with answers, and false ,two keyvalue pairs, answer 
@@ -29,16 +31,21 @@ const Game = (props) => {
                     {answerText: decode(arr.incorrect_answers[2]), isCorrect: false},
                     {answerText: decode(arr.correct_answer), isCorrect: true}
                 ]
-                    // console.log(arrOfAnswers)
-                    shuffleArray(tempArr)
+                   
+                    shuffleArray(tempArr) 
+                    tempArr.push(decode(arr.question))
+                    // tempArr.questionText = ();
                     return tempArr;
                 })
-                
-                setAnswers(arrOfAnswers);
+                // console.log(arrOfAnswers)
+                // setQuestionsAndAnswers(arrOfAnswers);
+
+                setQuestionsAndAnswers(arrOfAnswers);    
+                console.log("questions and answers", questionsAndAnswers)
             })
     }
 
-    // console.log("questions", questions,"game.js answers", answers)
+
     
     useEffect(() => {
         loadData();
@@ -54,6 +61,10 @@ const Game = (props) => {
             }
         }
 
+    // const handleButtonClick = () => {
+    //     const nextQuestion = currentQ + 1;
+    //     setCurrentQ(nextQuestion);
+    // }
     // setAnswers(shuffleArray(answers))
     // console.log("answers", answers)
 // console.log("questions", questions)
@@ -61,16 +72,30 @@ const Game = (props) => {
         <div className="Container">
             <div className='question-count'>
                 <div>
-                <h4>Score: {correctScore}/10</h4>
-                <h4>Missed: {incorrectScore}/10</h4>
+                    {/* <h4>Score: {correctScore}/10</h4>
+                    <h4>Missed: {incorrectScore}/10</h4> */}
+                </div>
+                <span>Question {currentQ + 1}</span>/{questions.length}
             </div>
-                <span>Question 1</span>/{questions.length}
+            <div>
+                {questionsAndAnswers && 
+                <Question qAndA={questionsAndAnswers[currentQ]} currentQ={currentQ} setCurrentQ={setCurrentQ} />}
+                {/* {questionsAndAnswers && questionsAndAnswers[0][4]} */}
+                
+                
+                {/* questionsAndAnswers[0].map((answers, index) => {
+                    <button key={index}>{answers.answerText}</button>
+                })}   */}
+   
+            
+              
+       
             </div>
-            {questions.map((question, index) => {
-                console.log("inside questions.map, questions and answers", questions, answers)
-                return <QuestionCard key={index} question={question} answers={answers} setCorrectScore={setCorrectScore} setIncorrectScore={setIncorrectScore} />
+          
+            {/* {questions.map((question, index) => {
+                return <QuestionCard key={index} question={question} answers={questionsAndAnswers} setCorrectScore={setCorrectScore} setIncorrectScore={setIncorrectScore} />
             })   
-            }
+            } */}
 
         </div>
     )
