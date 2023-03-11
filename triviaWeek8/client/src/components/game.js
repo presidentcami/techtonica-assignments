@@ -61,7 +61,7 @@ const Game = (props) => {
     return (
         <div>
             <div className="Container">
-                <div className='question-count'>
+                <div className="question-count">
                     <span>Question {currentQ + 1}/{questions.length}</span>
                 </div>
                 <div>
