@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 const Question = (props) => {
     const [disableQAndA, setDisableQAndA] = useState(false)
     console.log(props.qAndA, "inside question.js")
@@ -17,9 +18,16 @@ const Question = (props) => {
             props.setCorrectScore((previousScore) => previousScore + 1)
       }
 }
+    const handleResetClick = (e) => {
+        props.setCorrectScore(0);
+        const resetQCount = 0;
+        props.setCurrentQ(resetQCount);
+        setDisableQAndA(false)
+    }
     
     return (
-    <div>{disableQAndA ? <div className="score-section">You scored {props.correctScore}/10</div> :
+    <div>{disableQAndA ? <div className="score-section">You scored {props.correctScore}/10 
+    <div><button className='reset-button' type="submit" onClick={handleResetClick}>Reset to Retake the Quiz</button></div></div>  :
         <div className="question-section">
             <div className="question-text">
                 <h1>{props.qAndA[4]}</h1>

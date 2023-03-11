@@ -60,27 +60,23 @@ const Game = (props) => {
 
     return (
         <div>
-        <div className="Container">
-            <div className='question-count'>
-                <div>
-                    {/* <h4>Score: {correctScore}/10</h4> */}
-                    {/* <h4>Missed: {incorrectScore}/10</h4> */}
+            <div className="Container">
+                <div className='question-count'>
+                    <span>Question {currentQ + 1}/{questions.length}</span>
                 </div>
-                <span>Question {currentQ + 1}/{questions.length}</span>
-            </div>
-            <div>
-                {questionsAndAnswers && 
-                <Question 
-                questions={questions}
-                qAndA={questionsAndAnswers[currentQ]} 
-                currentQ={currentQ} 
-                setCurrentQ={setCurrentQ} 
-                correctScore={correctScore}
-                setCorrectScore={setCorrectScore} 
-                />}
+                <div>
+                    {questionsAndAnswers && 
+                    <Question 
+                    questions={questions}
+                    qAndA={questionsAndAnswers[currentQ]} 
+                    currentQ={currentQ} 
+                    setCurrentQ={setCurrentQ} 
+                    correctScore={correctScore}
+                    setCorrectScore={setCorrectScore} 
+                    />}
+                </div>
             </div>
         </div>
-    </div>
     )
 
 }
