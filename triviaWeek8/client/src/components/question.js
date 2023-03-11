@@ -19,7 +19,7 @@ const Question = (props) => {
 }
     
     return (
-    <div>{disableQAndA ? (null) :
+    <div>{disableQAndA ? <div className="score-section">You scored {props.correctScore}/10</div> :
         <div className="question-section">
             <div className="question-text">
                 <h1>{props.qAndA[4]}</h1>
@@ -33,8 +33,9 @@ const Question = (props) => {
            key={index} type="button" value={index}>
             {currArray.answerText}
             </button>
-        }
-    })}</div> 
+                }
+            })}
+        </div> 
     </div>}
 </div>
     )

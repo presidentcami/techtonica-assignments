@@ -59,13 +59,14 @@ const Game = (props) => {
         }
 
     return (
+        <div>
         <div className="Container">
             <div className='question-count'>
                 <div>
-                    <h4>Score: {correctScore}/10</h4>
+                    {/* <h4>Score: {correctScore}/10</h4> */}
                     {/* <h4>Missed: {incorrectScore}/10</h4> */}
                 </div>
-                <span>Question {currentQ + 1}</span>/{questions.length}
+                <span>Question {currentQ + 1}/{questions.length}</span>
             </div>
             <div>
                 {questionsAndAnswers && 
@@ -79,6 +80,7 @@ const Game = (props) => {
                 />}
             </div>
         </div>
+    </div>
     )
 
 }

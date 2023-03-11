@@ -15,7 +15,7 @@ const UserForm = (props) => {
 
   return (
     <div>
-    {disableForm ? (null) : (
+    {disableForm ? null : (
     <div className="ListMain">
       <div className="header">
         <form onSubmit={handleSubmit}>
