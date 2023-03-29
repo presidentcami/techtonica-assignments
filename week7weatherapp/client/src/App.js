@@ -7,27 +7,31 @@ function App() {
   const [city, setCity] = useState("");
   const [result, setResult] = useState(null);
 
-  //A function to do the get request and set the state from the hard code data
+  // capture city in a variable
+
+  // A function to do the get request and set the state from the hard code data
   const loadCity = () => {
-    fetch("http://localhost:8080/api/weather")
+    console.log(city)
+    fetch(`http://localhost:8080/weather?cityName=${city}`)
       .then((response) => response.json())
       .then((result) => {
-        //console.log(result)
-        setCity(result.weather[0].name);
+        console.log(result)
         setResult(result);
       });
   }
 
- const handleSubmit = (e) =>{
-  e.preventDefault();
-  loadCity();
- }
+  // all handleSubmit needs to do is load the city
+  const handleSubmit = () => {
+    loadCity();
+  }
 
 
   return (
     <div className="App">
-      <WeatherForm city={city} handleSubmit={handleSubmit}/>
-      {!result ? <p>Please click the botton to see Data</p> : <WeatherCard data={result} /> }
+      {/* send updateCity as props back to child, so we can use the 'setCity' function */}
+      <WeatherForm city={city} updateCity={setCity} onSubmit={handleSubmit}/>
+      {!result ? <p>Enter a city to see today's weather!</p> : <WeatherCard data={result} /> }
+      {/* {!city ? <p>Please click the button to see Data</p> : <p>{city}</p>} */}
     </div>
   );
 }
