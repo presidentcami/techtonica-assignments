@@ -22,20 +22,18 @@ app.get("/", (req, res) => {
   });
 
 // Make the GET request for the GAME Api for grabbing all the questions 
-
-
 // hardcode the game response for testing reasons to don't saturate my API call. 
-app.get('/api/game', (req, res) =>{
-  // const url = "https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple";  
-  // fetch(url)
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     res.send(data); 
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   });
-  res.json(fakedata);
+app.get('/api/game', (req, res) => {
+  const url = "https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple";
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+//  res.json(fakedata);
 })
 
 
